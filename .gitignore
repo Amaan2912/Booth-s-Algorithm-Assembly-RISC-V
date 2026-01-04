@@ -1,0 +1,48 @@
+# =========================
+# Build artifacts
+# =========================
+*.o
+*.obj
+*.a
+*.so
+
+# Executables / images
+*.elf
+*.bin
+*.hex
+*.out
+
+# Linker output
+*.map
+*.ld.out
+
+# Build directories
+build/
+out/
+dist/
+
+# =========================
+# Debugging / simulation
+# =========================
+*.dSYM/
+*.dbg
+qemu.log
+spike.log
+
+# =========================
+# Make / dependency files
+# =========================
+*.d
+*.depend
+
+# =========================
+# Editor files
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
