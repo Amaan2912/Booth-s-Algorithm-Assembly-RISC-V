@@ -4,5 +4,7 @@ This project demonstrates how multiplication and division are accurately calcula
 To clarify how each of these two algorithms work, the following section explains.
 
 Booth's algorithm uses the multiplicand (M) and the multiplier (Q) in 32-bit binary form while the accumulator register starts off as 0. If the least significant bit of the multiplier is equal to the register (Q_-1), then an arithmetic right shift is performed in which the most significant bit of the registers A, Q, and Q_-1 is maintained while the rest of the bits are shifted right. If Q's LSB is 0 or 1, and it is not equal to Q_-1 (1 or 0), then the accumulator is either added or subtracted by the multiplier before the arithmetic right shift. Note that adding 2's complement of the multiplier's binary value to the accumulator is similar to subtracting A by M.
-Restoring division algorithm 
+Restoring division algorithm uses the dividend and the divisor to calculate the final result; however, it takes the remainder as 0 while the quotient is taken as the dividend. Just like Booth's algorithm, the restoring division algorithm uses bitwise shifts based on conditions of operands. In this case, if the subtraction of the divisor from the remainder is less than 0, then the remainder is restored before the quotient shifts left by 1 bit. Otherwise, the quotient's LSB is 1 before the quotient shifts left for positive subtraction results of the divisor from the remainder.
+
+
 If you want to check out this program, please take a look at the "asm" file, and install RARS system to test the program.
